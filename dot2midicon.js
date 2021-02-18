@@ -91,7 +91,7 @@ input.on('noteon', function(msg) {
 		}
 	}
 
-	if (msg.note <=12 || msg.note >=29 && msg.note <=80){
+	if (msg.note <=12 || msg.note >=29 && msg.note <=84){
 
 		if (msg.note === 31 || msg.note === 34 || msg.note === 37 || msg.note === 40 || msg.note === 43 || msg.note === 46 || msg.note === 49 || msg.note === 52){
 	

@@ -4,6 +4,7 @@ var wing = 1;	//bwing/fwing 1 lub 2
 	
 var sessionnr = 0;
 var request = 0;
+var encodervalue = 2;
 var controller = 0;
 var faderValue = 0;
 var grandmastervalue = 100;
@@ -91,7 +92,30 @@ input.on('noteon', function(msg) {
 		}
 	}
 
-	if (msg.note <=12 || msg.note >=29 && msg.note <=84){
+	if (msg.note == 13){
+		client.send('{"requestType":"encoder","name":"PAN","value":' + encodervalue + ',"session":' + sessionnr + ',"maxRequests":0}');
+	}
+	if (msg.note == 14){
+		client.send('{"requestType":"encoder","name":"PAN","value":' + -1 * encodervalue + ',"session":' + sessionnr + ',"maxRequests":0}');
+	}
+	if (msg.note == 15)encodervalue = 2;
+	if (msg.note == 16){
+		client.send('{"requestType":"encoder","name":"TILT","value":' + encodervalue + ',"session":' + sessionnr + ',"maxRequests":0}');
+	}
+	if (msg.note == 17){
+		client.send('{"requestType":"encoder","name":"TILT","value":' + -1 * encodervalue + ',"session":' + sessionnr + ',"maxRequests":0}');
+	}
+	if (msg.note == 18)encodervalue = 0.2;
+	if (msg.note == 19){
+		client.send('{"requestType":"encoder","name":"DIM","value":' + encodervalue + ',"session":' + sessionnr + ',"maxRequests":0}');
+	}
+	if (msg.note == 20){
+		client.send('{"requestType":"encoder","name":"DIM","value":' + -1 * encodervalue + ',"session":' + sessionnr + ',"maxRequests":0}');
+	}
+	if (msg.note == 21)encodervalue = 0.02;
+
+
+	if (msg.note <=12 || msg.note >=29 && msg.note <=84){//80
 
 		if (msg.note === 31 || msg.note === 34 || msg.note === 37 || msg.note === 40 || msg.note === 43 || msg.note === 46 || msg.note === 49 || msg.note === 52){
 	

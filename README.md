@@ -34,4 +34,4 @@ turn on webremote (password remote)
 
 run from cmd line
 
-nodejs dot2midicon.js
+node dot2midicon.js

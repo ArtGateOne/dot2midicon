@@ -1,4 +1,6 @@
 
+//dot2midicon v 1.1 by ArtGateOne
+
 var pageIndex = 0; //strona flash
 var wing = 1;	//bwing/fwing 1 lub 2
 	
@@ -44,7 +46,7 @@ easymidi.getInputs().forEach(function(inputName){
 });
 */
 
-var input = new easymidi.Input('MIDIcon 0');
+var input = new easymidi.Input('MIDIcon');
 
 
 //send fader pos do dot2

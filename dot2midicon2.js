@@ -1,4 +1,4 @@
-//dot2midicon2 beta 1
+//dot2midicon2 v 1.1 by ArtGateOne
 /* INFO
 encoders
 1 - pan
@@ -13,7 +13,7 @@ Red / Green / Blue / White / Gobo1 / Gobo2 / Focus / Zoom
 
 
 //config
-var midi_in = 'MIDIcon 2 0';     //set correct midi in device name
+var midi_in = 'MIDIcon 2';     //set correct midi in device name
 var wing = 1;	// select bwing/fwing 1 or 2
 
 

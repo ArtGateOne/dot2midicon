@@ -1,0 +1,22 @@
+{
+  "name": "dot2midicon",
+  "version": "1.2.0",
+  "description": "none",
+  "main": "dot2midicon.js",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "ArtGateOne",
+  "license": "ISC",
+  "dependencies": {
+    "easymidi": "^3.0.1",
+    "websocket": "^1.0.34"
+  }
+}

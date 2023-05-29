@@ -1,4 +1,4 @@
-//dot2midicon2 v 1.1 by ArtGateOne
+//dot2midicon2 v 1.2 by ArtGateOne
 /* INFO
 encoders
 1 - pan
@@ -23,6 +23,7 @@ var encodervalue2 = 0.2;	//PAN/TILT FINE speed
 
 var sessionnr = 0;
 var request = 0;
+var interval_on = 0;
 var faderValue = 0;
 var grandmastervalue = 100;
 var blackout = false;
@@ -275,7 +276,10 @@ client.onmessage = function (e) {
 		}
 
 		if (obj.responseType == "login" && obj.result === true) {
-			setInterval(interval, 500);
+			if (interval_on == 0) {
+                interval_on = 1;
+                setInterval(interval, 500);//80
+            }
 		}
 	}
 };
